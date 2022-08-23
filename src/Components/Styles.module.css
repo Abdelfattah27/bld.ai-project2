@@ -1,0 +1,81 @@
+.card {
+  width: 18%;
+  min-width: 250px;
+  max-width: 300px;
+  margin: 11px 0px;
+  margin-right: 25px;
+  height: 330px;
+  cursor: pointer;
+}
+.card > * {
+  margin-top: 5px;
+}
+.title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.BestSeller {
+  background-color: #eceb98;
+  font-size: smaller;
+  color: black;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  text-indent: 3px;
+  margin: 10px 2px;
+  margin-left: 0px;
+  padding: 1px;
+}
+.instructor {
+  color: #6a6f73;
+}
+.rate {
+  color: #b4690e;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.students {
+  color: #6a6f73;
+}
+.price {
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+.alter {
+  color: #6a6f73;
+  text-decoration: line-through;
+}
+.image {
+  width: 100%;
+  height: 130px;
+}
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coursesSection {
+  /* border: 0.3px solid gray; */
+  margin: 30px;
+  padding: 50px;
+
+  padding-left: 40px;
+  padding-right: 20px;
+  font-size: larger;
+  margin-bottom: 200px;
+}
+.coursesSection p {
+  max-width: 900px;
+}
+.explore {
+  color: black;
+  background-color: white;
+  border: solid 1px black;
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 150px;
+  margin-top: 20px;
+}
