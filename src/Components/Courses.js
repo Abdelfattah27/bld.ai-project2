@@ -7,8 +7,8 @@ function Courses() {
     {
       id: "aseafe2",
       rate: 4.4,
-      image: "",
-      title: "learn python from zero to hero to hero to hero",
+      image: "https://img-c.udemycdn.com/course/750x422/394676_ce3d_5.jpg",
+      title: "Learn Python: The Complete Python Programming Course",
       instructor: "jose portila",
       stars: 4,
       students: 1432,
@@ -18,8 +18,8 @@ function Courses() {
     {
       id: "aseafe3",
       rate: 4.3,
-      image: "",
-      title: "learn python from zero to hero to hero to hero",
+      image: "https://img-c.udemycdn.com/course/750x422/394676_ce3d_5.jpg",
+      title: "Learn Python: The Complete Python Programming Course",
       instructor: "jose3 portila",
       stars: 5,
       students: 1437,
@@ -29,8 +29,8 @@ function Courses() {
     {
       id: "aseafe4",
       rate: 4.1,
-      image: "",
-      title: "learn python from zero to hero ",
+      image: "https://img-c.udemycdn.com/course/750x422/394676_ce3d_5.jpg",
+      title: "Learn Python: The Complete Python Programming Course",
       instructor: "Abdelfattah Hamdi",
       stars: 3,
       students: 1412,
@@ -40,8 +40,8 @@ function Courses() {
     {
       id: "aseafo2",
       rate: 4.0,
-      image: "",
-      title: "learn python from nothing to everything",
+      image: "https://img-c.udemycdn.com/course/750x422/396876_cc92_7.jpg",
+      title: "Learning Python for Data Analysis and Visualization",
       instructor: "Ahmed Alaa",
       stars: 1,
       students: 1532,
@@ -51,8 +51,8 @@ function Courses() {
     {
       id: "aseade2",
       rate: 4.1,
-      image: "",
-      title: "Teach python from zero to hero to hero to hero",
+      image: "https://img-c.udemycdn.com/course/750x422/405878_e5a0_3.jpg",
+      title: "Python for Beginners - Learn Programming from scratch",
       instructor: "jose porta",
       stars: 4,
       students: 9432,
@@ -62,8 +62,8 @@ function Courses() {
     {
       id: "aseafe7",
       rate: 3.4,
-      image: "",
-      title: "learn python from zero to hero to hero to hero",
+      image: "https://img-c.udemycdn.com/course/750x422/449532_2aa9_7.jpg",
+      title: "Python Beyond the Basics - Object-Oriented Programming",
       instructor: "jose ganzory",
       stars: 4,
       students: 1432,
@@ -73,8 +73,8 @@ function Courses() {
     {
       id: "bseafe2",
       rate: 4.4,
-      image: "",
-      title: "learn python from zero to hero to hero to hero",
+      image: "https://img-c.udemycdn.com/course/750x422/482754_7146_6.jpg",
+      title: "Python From Scratch & Selenium WebDriver QA Automation 2022",
       instructor: "jose portila",
       stars: 4,
       students: 1432,
@@ -84,8 +84,8 @@ function Courses() {
     {
       id: "aceafe2",
       rate: 4.4,
-      image: "",
-      title: "learn python from zero to hero to hero to hero",
+      image: "https://img-c.udemycdn.com/course/750x422/519554_da68_6.jpg",
+      title: "Teach Your Kids to Code: Learn to Program Python at Any Age!",
       instructor: "jose portila",
       stars: 4,
       students: 1432,
@@ -93,7 +93,9 @@ function Courses() {
       bestSeller: true,
     },
   ];
-  const renderCourses = data.map((course) => <Card>{course}</Card>);
+  const renderCourses = data.map((course) => (
+    <Card key={course.id}>{course}</Card>
+  ));
   return <div className={Styles.courses}>{renderCourses}</div>;
 }
 

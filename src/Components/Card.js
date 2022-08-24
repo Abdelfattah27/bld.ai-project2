@@ -7,22 +7,19 @@ import CourseRate from "./CourseRate";
 import BestSeller from "./BestSeller";
 import Styles from "./Styles.module.css";
 
-function Card(props) {
-  console.log(props.children);
+function Card({ children: data }) {
   return (
     <div className={Styles.card}>
-      <CourseImage></CourseImage>
-      <CourseTitle title={props.children.title}></CourseTitle>
-      <CourseInstructor
-        instructor={props.children.instructor}
-      ></CourseInstructor>
+      <CourseImage image={data.image}></CourseImage>
+      <CourseTitle title={data.title}></CourseTitle>
+      <CourseInstructor instructor={data.instructor}></CourseInstructor>
       <CourseRate
-        rate={props.children.rate}
-        stars={props.children.stars}
-        students={props.children.students}
+        rate={data.rate}
+        stars={data.stars}
+        students={data.students}
       ></CourseRate>
-      <CoursePrice price={props.children.price}></CoursePrice>
-      {props.children.bestSeller ? <BestSeller /> : ""}
+      <CoursePrice price={data.price}></CoursePrice>
+      {data.bestSeller ? <BestSeller /> : ""}
     </div>
   );
 

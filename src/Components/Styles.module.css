@@ -25,6 +25,7 @@
   margin: 10px 2px;
   margin-left: 0px;
   padding: 1px;
+  padding-bottom: 5px;
 }
 .instructor {
   color: #6a6f73;
@@ -78,4 +79,7 @@
   cursor: pointer;
   width: 150px;
   margin-top: 20px;
+}
+.explore:hover {
+  background-color: #f3f3f3;
 }
