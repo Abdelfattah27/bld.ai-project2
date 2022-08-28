@@ -12,26 +12,18 @@ function Card({ children: data }) {
     <div className={Styles.card}>
       <CourseImage image={data.image}></CourseImage>
       <CourseTitle title={data.title}></CourseTitle>
-      <CourseInstructor instructor={data.instructor}></CourseInstructor>
+      <CourseInstructor
+        instructor={data.instructors[0].name}
+      ></CourseInstructor>
       <CourseRate
-        rate={data.rate}
-        stars={data.stars}
-        students={data.students}
+        rate={Math.floor(data.rating * 100) / 100}
+        stars={Math.floor(data.rating)}
+        students={data.id}
       ></CourseRate>
       <CoursePrice price={data.price}></CoursePrice>
-      {data.bestSeller ? <BestSeller /> : ""}
+      {data.rating > 4.3 ? <BestSeller /> : ""}
     </div>
   );
-
-  //   return <div>Hello World</div>;
 }
 
 export default Card;
-/**
- * Image
- * Title
- * instructor
- * rate
- * price
- * bestseller
- */

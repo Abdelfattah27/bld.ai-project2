@@ -16,9 +16,3 @@ function CoursesSection() {
 }
 
 export default CoursesSection;
-/**
- *
- * CoursesTitle
- * Courses Discription
- * Explore
- */
