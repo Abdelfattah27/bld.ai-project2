@@ -7,9 +7,8 @@ function Header() {
       <div className={styles.headerContent}>
         <div className={styles.path}>
           <p>
-            Development <span className={styles.greaterThan}> > </span>{" "}
-            Programming Languages{" "}
-            <span className={styles.greaterThan}> > </span>
+            Development <span className={styles.greaterThan}> </span>{" "}
+            Programming Languages <span className={styles.greaterThan}> </span>
             {lang}
           </p>
         </div>
