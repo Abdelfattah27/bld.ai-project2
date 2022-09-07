@@ -1,6 +1,5 @@
 import React from "react";
 import LanguageIcon from "../../NavBarComponents/LanguageIcon";
-import UdemyLogo from "../../NavBarComponents/UdemyLogo";
 import styles from "./FooterStyles.module.css";
 
 function SectionThree() {

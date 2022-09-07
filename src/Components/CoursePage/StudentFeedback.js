@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./CourseStyles.module.css";
 import VisualizePercent from "./VisualizePercent";
 function StudentFeedback() {
-  const x = 43;
   return (
     <div className={styles.studentFeedback}>
       <h3>Student Feedback</h3>

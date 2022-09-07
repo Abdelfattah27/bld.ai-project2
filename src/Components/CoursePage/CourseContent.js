@@ -1,8 +1,6 @@
 import React from "react";
-import AccordionContent from "./Accordion/AccordionContent";
 import AccordionHeading from "./Accordion/AccordionHeading";
 import styles from "./CourseStyles.module.css";
-import PlayIcon from "./PlayIcon";
 
 function CourseContent() {
   return (
