@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./Styles.module.css";
+import Styles from "./CoursesStyles.module.css";
 function BestSeller() {
   return <div className={Styles.BestSeller}>BestSeller</div>;
 }

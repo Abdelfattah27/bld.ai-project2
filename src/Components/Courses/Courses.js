@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-import Styles from "./Styles.module.css";
+import Styles from "./CoursesStyles.module.css";
 
 function Courses() {
   const [loading, setLoading] = useState(true);

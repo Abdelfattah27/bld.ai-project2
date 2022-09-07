@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./Styles.module.css";
+import Styles from "./CoursesStyles.module.css";
 function CourseRate({ students, stars, rate }) {
   let star = "";
   for (let i = 0; i < stars; i++) {

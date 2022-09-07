@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./Styles.module.css";
+import Styles from "./CoursesStyles.module.css";
 
 function CoursePrice({ price }) {
   return <div className={Styles.price}>E£{price}</div>;

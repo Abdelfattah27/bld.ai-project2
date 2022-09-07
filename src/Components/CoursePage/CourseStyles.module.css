@@ -1,0 +1,447 @@
+.header {
+  position: relative;
+  top: 70px;
+  background-color: #1c1d1f;
+  width: 100%;
+  color: white;
+  padding: 40px 0px;
+  padding-left: 150px;
+  margin-bottom: 10px;
+}
+.headerContent {
+  max-width: 700px;
+}
+.path {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #cec0fc;
+}
+.greaterThan {
+  color: white;
+}
+
+.rate {
+  color: #f3ca8c;
+}
+.rating {
+  color: #cec0fc;
+  text-decoration: underline;
+}
+svg {
+  margin-left: 1.5rem;
+  margin-right: 0.5rem;
+}
+.exclamation {
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.courseTabs {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 200px;
+  margin-right: 15px;
+  max-width: 700px;
+  font-weight: 700;
+  color: gray;
+}
+.tabsContainer {
+  position: relative;
+  top: 70px;
+  border-bottom: 0.5px solid rgb(213, 213, 213);
+  display: flex;
+  margin-left: 200px;
+  margin-right: 15px;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+/* .active {
+  color: black;
+  padding-bottom: 10px;
+  border-bottom: 3px solid black;
+} */
+.button {
+  background-color: white;
+  border: none;
+  font-weight: 700;
+  color: gray;
+  padding: 10px 0px;
+  flex: 25%;
+  /* padding-bottom: 10px;
+  padding-right: 30px; */
+}
+.button:hover {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.description {
+  position: relative;
+  top: 80px;
+  margin: 30px 15px;
+  margin-left: 200px;
+  max-width: 700px;
+  border: 0.5px solid rgb(213, 213, 213);
+  padding: 25px;
+}
+.learnList {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.learnList li:before {
+  content: "✓ ";
+  margin-right: 10px;
+}
+
+.learnList li {
+  color: #1c1d1f;
+  font-size: 0.9rem;
+  font-weight: 400;
+  flex: 50%;
+}
+
+/*Course Preview */
+.coursePreviewContainer {
+  width: 340px;
+  text-align: center;
+}
+.previewImage {
+  width: 100%;
+}
+.coursePrice {
+  text-align: left;
+}
+.addToCart {
+  width: 90%;
+  background-color: #a435f0;
+  height: 3rem;
+  color: white;
+  font-weight: 700;
+  border: none;
+  margin-bottom: 10px;
+}
+.buyNow {
+  width: 90%;
+  background-color: white;
+  height: 3rem;
+  color: black;
+  font-weight: 700;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+.coursePros {
+  font-size: 13px;
+}
+
+.courseContains {
+  text-align: left;
+  font-size: 1.8rem;
+}
+.courseContaint {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  margin-left: 30px;
+}
+.courseLinks {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(213, 213, 213);
+  margin-bottom: 20px;
+}
+.courseLinks a {
+  color: black;
+  font-weight: 600;
+}
+.options {
+  text-align: left;
+  font-size: 1.3rem;
+}
+.udemyBusinessDescription {
+  text-align: left;
+  font-size: 0.9rem;
+}
+.tryUdemyBusiness {
+  background-color: white;
+  font-weight: 500;
+  width: 90%;
+  height: 40px;
+  border: 0.5px solid black;
+}
+
+/*Course Content*/
+.courseContentContainer {
+  margin-left: 200px;
+  max-width: 1000px;
+  position: relative;
+
+  top: 80px;
+}
+
+/*accordion*/
+.contentSectionTitle {
+  font-size: 0.9rem;
+  color: #5624d0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.contentSectionTitle:hover {
+  color: #5624d0;
+}
+.sectionTime {
+  color: #6a6f73;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.sectionInformation {
+  color: #46484a;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+.sectionInformation:hover {
+  color: #46484a;
+}
+.moreSections {
+  width: 100%;
+  padding: 5px 0px;
+  margin-top: 1rem;
+  background-color: white;
+  border: 0.5px solid black;
+}
+.moreSections:hover {
+  background-color: rgb(233, 230, 230);
+}
+.requirements {
+  position: relative;
+  top: 80px;
+  margin-left: 200px;
+}
+.courseDescription {
+  position: relative;
+  top: 80px;
+  margin-left: 200px;
+}
+
+.transparency {
+  position: relative;
+  overflow: hidden;
+  height: 70px;
+}
+
+.transparency:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  pointer-events: none; /* so the text is still selectable */
+}
+.showMore {
+  border: none;
+  color: #5624d0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background-color: white;
+}
+.instractors {
+  position: relative;
+  top: 80px;
+  margin-left: 200px;
+  max-width: 1000px;
+}
+.instructor {
+  max-width: 1000px;
+}
+.instructorInformation {
+  list-style: none;
+  width: 1000px;
+}
+
+.instructorOverview {
+  display: flex;
+  align-items: center;
+}
+.instructorInformation li {
+  margin: 0px;
+  margin-left: 20px;
+}
+.instructorImage {
+  border-radius: 50%;
+  width: 110px;
+}
+.instructorDescription {
+  text-indent: 25px;
+}
+.studentFeedback {
+  position: relative;
+  top: 80px;
+  margin-left: 200px;
+  max-width: 1000px;
+}
+.visualizePercentage {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.visualizeParent {
+  background-color: #d1d7dc;
+  margin: 7px 20px;
+  height: 10px;
+}
+.instructorRating {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #b4690e;
+}
+.instructorRatingWord {
+  color: #b4690e;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.reviews {
+  position: relative;
+  top: 80px;
+  margin-left: 200px;
+  max-width: 1000px;
+}
+
+.formBorder {
+  background-color: white;
+  border: 1px solid black;
+  margin-bottom: 30px;
+  height: 40px;
+}
+.formInput {
+  width: 90%;
+  padding: 0px 15px;
+}
+.formInput:focus {
+  outline: none;
+}
+.searchButton {
+  cursor: pointer;
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  padding: 0px;
+  border: none;
+}
+.searchIcon {
+  color: white;
+  width: 20px;
+  margin: 0px;
+}
+.filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.selectFilter {
+  cursor: pointer;
+  height: 40px;
+  padding: 0px 25px;
+  text-align: center;
+  color: gray;
+}
+.reviewFilter {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+.reviewerImg {
+  width: 60px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.likeBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  border: 0.5px solid black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.likeIcon {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+}
+.likeIconFill {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  color: black;
+}
+.reactBtn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.review {
+  display: flex;
+}
+.reviewerName {
+  font-weight: 700;
+  margin: 0px;
+}
+.reviewDate {
+  font-size: 0.8rem;
+  color: #6a6f73;
+  font-weight: 500;
+}
+.reviewStars {
+  margin-bottom: 10px;
+}
+.comment {
+  color: #1c1d1f;
+  margin: 0px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.readerOpinion {
+  color: #1c1d1f;
+  margin: 0px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.reportReview {
+  cursor: pointer;
+  color: #1c1d1f;
+  margin: 0px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: underline;
+}

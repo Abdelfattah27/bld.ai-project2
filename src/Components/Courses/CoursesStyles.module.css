@@ -20,7 +20,7 @@
   font-size: smaller;
   color: black;
   width: 100px;
-  height: 20px;
+  height: 25px;
   text-align: center;
   text-indent: 3px;
   margin: 10px 2px;
@@ -126,4 +126,21 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.list {
+  list-style: none;
+  max-width: 1000px;
+}
+.tab {
+  font-weight: 700;
+  color: #6a6f73;
+  cursor: pointer;
+}
+.active {
+  color: black;
+}
+.allCourses {
+  padding: 2rem;
+  border: 0.5px solid gray;
 }

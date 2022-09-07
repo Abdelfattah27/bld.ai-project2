@@ -5,7 +5,7 @@ import CourseInstructor from "./CourseInstructor";
 import CoursePrice from "./CoursePrice";
 import CourseRate from "./CourseRate";
 import BestSeller from "./BestSeller";
-import Styles from "./Styles.module.css";
+import Styles from "./CoursesStyles.module.css";
 
 function Card({ children: data }) {
   return (
