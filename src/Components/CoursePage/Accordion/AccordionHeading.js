@@ -3,41 +3,45 @@ import AccordionBody from "react-bootstrap/esm/AccordionBody";
 import styles from "../CourseStyles.module.css";
 import PlayIcon from "../PlayIcon";
 import AccordionContent from "./AccordionContent";
-function AccordionHeading() {
+function AccordionHeading({ data, open }) {
   return (
     <div className="accordion-item">
-      <h2 className="accordion-header" id="hello">
+      <h2 className="accordion-header" id={"data" + data.content_length}>
         <button
-          className={"accordion-button collapsed " + styles.accordionButton}
+          className={
+            `accordion-button ${open ? "" : "collapsed"} ` +
+            styles.accordionButton
+          }
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#hello2"
+          data-bs-target={"#data" + data.content_length + "2"}
           aria-expanded="false"
-          aria-controls="hello2"
+          aria-controls={"#data" + data.content_length + "2"}
         >
-          <div className="d-flex w-100 justify-content-between">
-            <div>Frontend Development</div>
-            <div className="">
+          <div className="w-100 row">
+            <div className="col-9">{data.title}</div>
+            <div className="col-3">
               <a
                 className={"me-4 " + styles.sectionInformation}
                 href="www.facebook.com"
               >
-                17 lecture
+                {data["lecture_count"]} lectures
               </a>
               <span className={"ms-2 " + styles.sectionInformation}>
-                1hr 10min
+                {Math.floor(data["content_length"] / 60)}hr{" "}
+                {data["content_length"] % 60}min
               </span>
             </div>
           </div>
         </button>
       </h2>
       <div
-        id="hello2"
-        className="accordion-collapse collapse "
-        aria-labelledby="hello"
+        id={"data" + data.content_length + "2"}
+        className={`accordion-collapse collapse ${open ? "show" : ""} `}
+        aria-labelledby={"data" + data.content_length}
       >
-        <div className="accordion-body d-flex justify-content-between">
-          <AccordionContent></AccordionContent>
+        <div className="accordion-body ">
+          <AccordionContent data={data.items}></AccordionContent>
         </div>
       </div>
     </div>

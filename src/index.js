@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CourseHomePage from "./Components/CoursePage/CourseHomePage";
+import HomePage from "./Components/HomePage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

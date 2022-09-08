@@ -1,3 +1,7 @@
+:root {
+  --section-margin: 150px;
+}
+
 .header {
   position: relative;
   top: 70px;
@@ -43,7 +47,7 @@ svg {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-left: 200px;
+  margin-left: var(--section-margin);
   margin-right: 15px;
   max-width: 700px;
   font-weight: 700;
@@ -54,7 +58,7 @@ svg {
   top: 70px;
   border-bottom: 0.5px solid rgb(213, 213, 213);
   display: flex;
-  margin-left: 200px;
+  margin-left: var(--section-margin);
   margin-right: 15px;
   max-width: 700px;
   margin-bottom: 40px;
@@ -83,7 +87,7 @@ svg {
   position: relative;
   top: 80px;
   margin: 30px 15px;
-  margin-left: 200px;
+  margin-left: var(--section-margin);
   max-width: 700px;
   border: 0.5px solid rgb(213, 213, 213);
   padding: 25px;
@@ -103,6 +107,7 @@ svg {
 }
 
 .learnList li {
+  white-space: nowrap;
   color: #1c1d1f;
   font-size: 0.9rem;
   font-weight: 400;
@@ -182,14 +187,18 @@ svg {
 
 /*Course Content*/
 .courseContentContainer {
-  margin-left: 200px;
+  margin-left: var(--section-margin);
   max-width: 1000px;
   position: relative;
-
+  margin-bottom: 50px;
   top: 80px;
 }
 
 /*accordion*/
+.accordionButton:focus {
+  border: none !important;
+  box-shadow: unset !important;
+}
 .contentSectionTitle {
   font-size: 0.9rem;
   color: #5624d0;
@@ -227,12 +236,14 @@ svg {
 .requirements {
   position: relative;
   top: 80px;
-  margin-left: 200px;
+  margin-left: var(--section-margin);
+  margin-bottom: 50px;
 }
 .courseDescription {
   position: relative;
   top: 80px;
-  margin-left: 200px;
+  margin-left: var(--section-margin);
+  margin-bottom: 50px;
 }
 
 .transparency {
@@ -265,8 +276,9 @@ svg {
 .instractors {
   position: relative;
   top: 80px;
-  margin-left: 200px;
+  margin-left: var(--section-margin);
   max-width: 1000px;
+  margin-bottom: 50px;
 }
 .instructor {
   max-width: 1000px;
@@ -294,8 +306,9 @@ svg {
 .studentFeedback {
   position: relative;
   top: 80px;
-  margin-left: 200px;
+  margin-left: var(--section-margin);
   max-width: 1000px;
+  margin-bottom: 50px;
 }
 .visualizePercentage {
   display: flex;
@@ -320,8 +333,9 @@ svg {
 .reviews {
   position: relative;
   top: 80px;
-  margin-left: 200px;
+  margin-left: var(--section-margin);
   max-width: 1000px;
+  margin-bottom: 50px;
 }
 
 .formBorder {
@@ -367,13 +381,13 @@ svg {
   margin-right: 20px;
 }
 .reviewerImg {
-  width: 60px;
+  width: 55px;
   height: 50px;
   background-color: black;
   color: white;
-  border-radius: 50%;
   font-weight: 600;
   margin-right: 20px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -409,6 +423,7 @@ svg {
 }
 .review {
   display: flex;
+  margin-bottom: 30px;
 }
 .reviewerName {
   font-weight: 700;
@@ -444,4 +459,53 @@ svg {
   font-size: 0.9rem;
   font-weight: 400;
   text-decoration: underline;
+}
+.error {
+  text-align: center;
+  color: #b00020;
+  text-decoration: underline;
+  margin-top: 300px;
+}
+
+.loading {
+  margin: auto;
+  display: block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: 300px;
+}
+.loading div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid rgb(116, 116, 116);
+  border-radius: 50%;
+  animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(116, 116, 116) transparent transparent transparent;
+}
+.loading div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loading div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loading div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.reviewerImage {
+  width: 50px;
+  margin-right: 15px;
+  height: 50px;
 }

@@ -8,7 +8,7 @@ function Courses() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8000/courses")
+    fetch("http://localhost:8000/HomePageCourses")
       .then((response) => response.json())
       .then((response) => {
         setLoading(false);

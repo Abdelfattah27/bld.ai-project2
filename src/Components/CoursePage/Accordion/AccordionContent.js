@@ -1,24 +1,28 @@
 import React from "react";
 import styles from "../CourseStyles.module.css";
 import PlayIcon from "../PlayIcon";
-function AccordionContent() {
+function AccordionContent({ data }) {
   return (
     <>
-      <div>
-        <PlayIcon />
-        <span className={styles.contentSectionTitle}>
-          What you're going to get from this course
-        </span>
-      </div>
-      <div>
-        <a
-          className={"me-5 " + styles.contentSectionTitle}
-          href="www.facebook.com"
-        >
-          Preview
-        </a>
-        <span className={"ms-3 " + styles.sectionTime}>03:27</span>
-      </div>
+      {data.map((ele) => (
+        <div key={ele.learn_url} className="row">
+          <div className="col-9">
+            <PlayIcon />
+            <span className={styles.contentSectionTitle}>{ele.title}</span>
+          </div>
+          <div className="col-3">
+            <a
+              className={"me-5 " + styles.contentSectionTitle}
+              href="www.facebook.com"
+            >
+              Preview
+            </a>
+            <span className={"ms-3 " + styles.sectionTime}>
+              {ele["content_summary"]}
+            </span>
+          </div>
+        </div>
+      ))}
     </>
   );
 }

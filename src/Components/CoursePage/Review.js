@@ -5,7 +5,8 @@ import DisLikeIconFill from "./DisLikeIconFill";
 import LikeIcon from "./LikeIcon";
 import LikeIconFill from "./LikeIconFill";
 
-function Review() {
+function Review({ data }) {
+  console.log();
   const [isTheirPhot, setPhoto] = useState(false);
   const [isLiked, setLiked] = useState(false);
   const [isDisLiked, setDisLiked] = useState(false);
@@ -21,24 +22,24 @@ function Review() {
       setLiked(false);
     } else setDisLiked(!isDisLiked);
   };
-  const name = "Ahmed Ghally";
   return (
     <div className={styles.review}>
-      {isTheirPhot ? (
-        <img src="hamada.com" alt="Review by hamada" />
+      {data.img ? (
+        <img className={styles.reviewerImage} src={data.img} alt={data.name} />
       ) : (
-        <span className={styles.reviewerImg}>AH</span>
+        <span className={styles.reviewerImg}>
+          {data.name
+            .split(" ")
+            .reduce((prev, ele) => prev + ele.substring(0, 1), "")
+            .toUpperCase()}
+        </span>
       )}
       <div>
-        <p className={styles.reviewerName}>Ahmed Mia A.</p>
+        <p className={styles.reviewerName}>{data.name}</p>
         <p className={styles.reviewStars}>
-          ⭐⭐⭐⭐⭐ <span className={styles.reviewDate}>2 months ago</span>
+          ⭐⭐⭐⭐⭐ <span className={styles.reviewDate}>{}</span>
         </p>
-        <p className={styles.comment}>
-          perfect course with many of project to improve my skill in every
-          section. vary detail explanation and easy to understand with
-          animation. Thank you Angela & team
-        </p>
+        <p className={styles.comment}>{data.comment}</p>
         <p className={styles.readerOpinion}>
           {isLiked || isDisLiked
             ? "Thank you for your feedback"

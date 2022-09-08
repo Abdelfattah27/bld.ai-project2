@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./CourseStyles.module.css";
 import Review from "./Review";
 
-function Reviews() {
+function Reviews({ data }) {
+  console.log(data);
   return (
     <div className={styles.reviews}>
       <h3>Reviews</h3>
@@ -42,7 +43,9 @@ function Reviews() {
           <option>One Stars</option>
         </select>
       </div>
-      <Review />
+      {data.map((ele) => (
+        <Review data={ele} />
+      ))}
     </div>
   );
 }
