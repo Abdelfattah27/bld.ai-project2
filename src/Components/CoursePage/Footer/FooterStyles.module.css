@@ -3,8 +3,22 @@
   top: 80px;
   background-color: #1c1d1f;
   color: white;
-  height: 500px;
   width: 100%;
+  min-width: 600px;
+}
+.secondSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-top: 1px solid #3e4143;
+}
+.thirdSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-top: 1px solid #3e4143;
 }
 .firstSection {
   display: flex;
@@ -13,6 +27,7 @@
   padding: 20px 50px;
   border-top: 1px solid #3e4143;
 }
+.thirdSection > button,
 .firstSection > button {
   background-color: #1c1d1f;
   border: 1px solid white;
@@ -20,11 +35,15 @@
   color: white;
   padding: 0px 12px;
 }
+.companiesLogo {
+  display: flex;
+}
 .companiesLogo > img {
   cursor: pointer;
   margin-right: 15px;
 }
 .udemyBusiness {
+  cursor: pointer;
   color: #cec0fc;
 }
 .companies {
@@ -70,4 +89,31 @@
 }
 .copyRight {
   font-size: 0.7rem;
+}
+.teachOnUdemy {
+  white-space: nowrap;
+}
+@media screen and (max-width: 700px) {
+  .firstSection {
+    flex-wrap: wrap;
+  }
+  .footerLinks {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .secondSection {
+    flex-wrap: wrap;
+  }
+  .companiesLogo {
+    margin-top: 20px;
+  }
+  .languageBtn > * {
+    display: inline !important;
+  }
+  .languageBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

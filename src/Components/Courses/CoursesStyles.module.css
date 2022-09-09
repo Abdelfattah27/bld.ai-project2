@@ -1,12 +1,16 @@
 .card {
-  width: 250px;
+  width: 200px;
   margin: 10px 0px;
   margin-right: 15px;
+
   /* height: 330px; */
   cursor: pointer;
 }
 .card > * {
   margin-top: 5px;
+}
+.card :hover {
+  color: unset;
 }
 .title {
   min-height: 42px;

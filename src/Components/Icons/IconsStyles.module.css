@@ -1,0 +1,22 @@
+.star {
+  color: #e59819;
+  margin: 0px;
+  margin-left: 1px;
+}
+.searchIcon {
+  color: white;
+  width: 20px;
+  margin: 0px;
+}
+.likeIcon {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+}
+.likeIconFill {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  color: black;
+}

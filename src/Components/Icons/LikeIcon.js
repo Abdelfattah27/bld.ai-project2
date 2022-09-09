@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CourseStyles.module.css";
+import styles from "./IconsStyles.module.css";
 
 function LikeIcon() {
   return (

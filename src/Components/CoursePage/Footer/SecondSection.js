@@ -3,7 +3,7 @@ import styles from "./FooterStyles.module.css";
 
 function SecondSection() {
   return (
-    <div className={styles.firstSection}>
+    <div className={styles.secondSection}>
       <p className={styles.companies}>
         Top companies choose{" "}
         <span className={styles.udemyBusiness}>Udemy Business</span> to build

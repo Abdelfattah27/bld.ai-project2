@@ -10,7 +10,7 @@ function FirstSection() {
           earn money
         </span>
       </div>
-      <button>Teach on Udemy</button>
+      <button className={styles.teachOnUdemy}>Teach on Udemy</button>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import styles from "./FooterStyles.module.css";
 function SectionThree() {
   return (
     <>
-      <div className={styles.firstSection}>
+      <div className={styles.thirdSection}>
         <div className={styles.footerLinks}>
           <ul>
             <li>Udemy Business</li>
@@ -30,7 +30,7 @@ function SectionThree() {
           </ul>
         </div>
         <button className={styles.languageBtn}>
-          <LanguageIcon /> English
+          <LanguageIcon /> <span>English</span>
         </button>
       </div>
       <div className={styles.copyRights}>

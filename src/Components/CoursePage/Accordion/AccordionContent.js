@@ -1,6 +1,6 @@
 import React from "react";
+import PlayIcon from "../../Icons/PlayIcon";
 import styles from "../CourseStyles.module.css";
-import PlayIcon from "../PlayIcon";
 function AccordionContent({ data }) {
   return (
     <>

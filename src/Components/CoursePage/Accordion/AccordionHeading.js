@@ -1,12 +1,13 @@
 import React from "react";
-import AccordionBody from "react-bootstrap/esm/AccordionBody";
 import styles from "../CourseStyles.module.css";
-import PlayIcon from "../PlayIcon";
 import AccordionContent from "./AccordionContent";
 function AccordionHeading({ data, open }) {
   return (
     <div className="accordion-item">
-      <h2 className="accordion-header" id={"data" + data.content_length}>
+      <h2
+        className="accordion-header"
+        id={"data" + Math.floor(data.content_length)}
+      >
         <button
           className={
             `accordion-button ${open ? "" : "collapsed"} ` +
@@ -14,9 +15,9 @@ function AccordionHeading({ data, open }) {
           }
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target={"#data" + data.content_length + "2"}
+          data-bs-target={"#data" + Math.floor(data.content_length) + "2"}
           aria-expanded="false"
-          aria-controls={"#data" + data.content_length + "2"}
+          aria-controls={"#data" + Math.floor(data.content_length) + "2"}
         >
           <div className="w-100 row">
             <div className="col-9">{data.title}</div>
@@ -36,9 +37,9 @@ function AccordionHeading({ data, open }) {
         </button>
       </h2>
       <div
-        id={"data" + data.content_length + "2"}
+        id={"data" + Math.floor(data.content_length) + "2"}
         className={`accordion-collapse collapse ${open ? "show" : ""} `}
-        aria-labelledby={"data" + data.content_length}
+        aria-labelledby={"data" + Math.floor(data.content_length)}
       >
         <div className="accordion-body ">
           <AccordionContent data={data.items}></AccordionContent>

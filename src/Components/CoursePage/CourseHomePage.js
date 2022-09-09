@@ -11,8 +11,10 @@ import StudentFeedback from "./StudentFeedback";
 import Reviews from "./Reviews";
 import Footer from "./Footer/Footer";
 import styles from "./CourseStyles.module.css";
+import { useParams } from "react-router-dom";
 
 function CourseHomePage() {
+  const { courseId } = useParams();
   const [loading, setLoading] = useState(true);
   const [courses, setCourses] = useState([]);
   const [error, setError] = useState("");
@@ -23,7 +25,6 @@ function CourseHomePage() {
         setLoading(false);
         setCourses(response);
         setError("");
-        console.log(response);
       })
       .catch((error) => {
         setLoading(false);
@@ -32,7 +33,7 @@ function CourseHomePage() {
       });
   }, []);
   let renderState = [];
-  if (error) {
+  if (error || isNaN(courseId)) {
     renderState = (
       <div className={styles.error}>
         Something went wrong while loading course 😟😟
@@ -50,18 +51,23 @@ function CourseHomePage() {
   } else {
     renderState = (
       <>
-        <Header data={courses[0]["Header"]}></Header>
+        <Header data={courses[courseId % 2]["Header"]}></Header>
         <CourseTabs></CourseTabs>
         <LearningDescription
-          data={courses[0]["learning-objective"]}
+          data={courses[courseId % 2]["learning-objective"]}
         ></LearningDescription>
-        <CourseContent data={courses[0]["curriculum_context"]}></CourseContent>
-        <Requirements data={courses[0]["Requirements"]}></Requirements>
-        <Description data={courses[0]["Description"]}></Description>
-        <Instractors data={courses[0]["Instructor"]}></Instractors>
-        <StudentFeedback data={courses[0]["studentFeedback"]}></StudentFeedback>
-        <Reviews data={courses[0]["reviews"]}></Reviews>
-        <Footer></Footer>
+        <CourseContent
+          data={courses[courseId % 2]["curriculum_context"]}
+        ></CourseContent>
+        <Requirements
+          data={courses[courseId % 2]["Requirements"]}
+        ></Requirements>
+        <Description data={courses[courseId % 2]["Description"]}></Description>
+        <Instractors data={courses[courseId % 2]["Instructor"]}></Instractors>
+        <StudentFeedback
+          data={courses[courseId % 2]["studentFeedback"]}
+        ></StudentFeedback>
+        <Reviews data={courses[courseId % 2]["reviews"]}></Reviews>
       </>
     );
   }
@@ -69,6 +75,7 @@ function CourseHomePage() {
     <>
       <NavBar></NavBar>
       {renderState}
+      <Footer></Footer>
     </>
   );
 }

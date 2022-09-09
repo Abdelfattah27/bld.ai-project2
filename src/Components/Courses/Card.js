@@ -9,8 +9,11 @@ import Styles from "./CoursesStyles.module.css";
 
 function Card({ children: data }) {
   return (
+    // <a role `} >
     <div className={Styles.card}>
-      <CourseImage image={data.image}></CourseImage>
+      <a href={`/course/${data.id}`}>
+        <CourseImage image={data.image}></CourseImage>
+      </a>
       <CourseTitle title={data.title}></CourseTitle>
       <CourseInstructor
         instructor={data.instructors[0].name}
@@ -23,6 +26,7 @@ function Card({ children: data }) {
       <CoursePrice price={data.price}></CoursePrice>
       {data.rating > 4.3 ? <BestSeller /> : ""}
     </div>
+    // </a>
   );
 }
 

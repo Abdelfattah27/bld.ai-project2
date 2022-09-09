@@ -1,15 +1,25 @@
 import React, { useState } from "react";
+import StarIconFill from "../Icons/StarIconFill";
 import styles from "./CourseStyles.module.css";
-import DisLikeIcon from "./DisLikeIcon";
-import DisLikeIconFill from "./DisLikeIconFill";
-import LikeIcon from "./LikeIcon";
-import LikeIconFill from "./LikeIconFill";
+import DisLikeIcon from "../Icons/DisLikeIcon";
+import DisLikeIconFill from "../Icons/DisLikeIconFill";
+import LikeIcon from "../Icons/LikeIcon";
+import LikeIconFill from "../Icons/LikeIconFill";
 
 function Review({ data }) {
   console.log();
   const [isTheirPhot, setPhoto] = useState(false);
   const [isLiked, setLiked] = useState(false);
   const [isDisLiked, setDisLiked] = useState(false);
+  let name = data.name
+    .split(" ")
+    .reduce((prev, ele) => prev + ele.substring(0, 1), "")
+    .toUpperCase();
+  if (name.length > 2) {
+    name = name[0] + name[name.length - 1];
+  } else if (name.length < 2) {
+    name += " ";
+  }
   const toggleLike = () => {
     if (isDisLiked && !isLiked) {
       setDisLiked(false);
@@ -27,17 +37,17 @@ function Review({ data }) {
       {data.img ? (
         <img className={styles.reviewerImage} src={data.img} alt={data.name} />
       ) : (
-        <span className={styles.reviewerImg}>
-          {data.name
-            .split(" ")
-            .reduce((prev, ele) => prev + ele.substring(0, 1), "")
-            .toUpperCase()}
-        </span>
+        <div className={styles.reviewerImg}>{name}</div>
       )}
       <div>
         <p className={styles.reviewerName}>{data.name}</p>
         <p className={styles.reviewStars}>
-          ⭐⭐⭐⭐⭐ <span className={styles.reviewDate}>{}</span>
+          <StarIconFill />
+          <StarIconFill />
+          <StarIconFill />
+          <StarIconFill />
+          <StarIconFill />
+          <span className={styles.reviewDate}>{}</span>
         </p>
         <p className={styles.comment}>{data.comment}</p>
         <p className={styles.readerOpinion}>

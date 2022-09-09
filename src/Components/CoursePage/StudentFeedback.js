@@ -1,4 +1,7 @@
 import React from "react";
+import HalfStarIcon from "../Icons/HalfStarIcon";
+import StarIconEmpty from "../Icons/StarIconEmpty";
+import StarIconFill from "../Icons/StarIconFill";
 import styles from "./CourseStyles.module.css";
 import VisualizePercent from "./VisualizePercent";
 function StudentFeedback({ data }) {
@@ -8,7 +11,10 @@ function StudentFeedback({ data }) {
       <div className="d-flex ">
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className={styles.instructorRating}>{data.totalRating}</div>
-          <div className={styles.instructorRatingStars}>⭐⭐⭐⭐⭐</div>
+          <div className={styles.instructorRatingStars}>
+            <StarIconFill /> <StarIconFill /> <StarIconFill /> <StarIconFill />{" "}
+            <HalfStarIcon />
+          </div>
           <div className={styles.instructorRatingWord}>Course Rating</div>
         </div>
         <div className={styles.visualizePercentage}>
@@ -19,11 +25,41 @@ function StudentFeedback({ data }) {
           <VisualizePercent percent={data.oneStar} />
         </div>
         <div>
-          <div className="me-3">⭐⭐⭐⭐⭐</div>
-          <div className="me-3">⭐⭐⭐⭐✨</div>
-          <div className="me-3">⭐⭐⭐✨✨</div>
-          <div className="me-3">⭐⭐✨✨✨</div>
-          <div className="me-3">⭐✨✨✨✨</div>
+          <div className="me-3">
+            <StarIconFill />
+            <StarIconFill />
+            <StarIconFill />
+            <StarIconFill />
+            <StarIconFill />
+          </div>
+          <div className="me-3">
+            <StarIconFill />
+            <StarIconFill />
+            <StarIconFill />
+            <StarIconFill />
+            <StarIconEmpty />
+          </div>
+          <div className="me-3">
+            <StarIconFill />
+            <StarIconFill />
+            <StarIconFill />
+            <StarIconEmpty />
+            <StarIconEmpty />
+          </div>
+          <div className="me-3">
+            <StarIconFill />
+            <StarIconFill />
+            <StarIconEmpty />
+            <StarIconEmpty />
+            <StarIconEmpty />
+          </div>
+          <div className="me-3">
+            <StarIconFill />
+            <StarIconEmpty />
+            <StarIconEmpty />
+            <StarIconEmpty />
+            <StarIconEmpty />
+          </div>
         </div>
         <div>
           <div>{data.fiveStars} %</div>
