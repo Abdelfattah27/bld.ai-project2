@@ -11,9 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<CourseHomePage />} />
-      </Routes>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

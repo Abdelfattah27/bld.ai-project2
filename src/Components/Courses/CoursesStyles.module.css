@@ -1,10 +1,8 @@
 .card {
-  width: 18%;
-  min-width: 250px;
-  max-width: 300px;
-  margin: 11px 0px;
-  margin-right: 25px;
-  height: 330px;
+  width: 250px;
+  margin: 10px 0px;
+  margin-right: 15px;
+  /* height: 330px; */
   cursor: pointer;
 }
 .card > * {
@@ -49,7 +47,6 @@
 }
 .image {
   width: 100%;
-  height: 130px;
 }
 .courses {
   display: flex;
@@ -60,7 +57,6 @@
   /* border: 0.3px solid gray; */
   margin: 30px;
   padding: 50px;
-
   padding-left: 40px;
   padding-right: 20px;
   font-size: larger;
@@ -119,6 +115,30 @@
 .loading div:nth-child(3) {
   animation-delay: -0.15s;
 }
+
+.noCourses {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.noCourses > * {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.sorry {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.optionHeading {
+  font-weight: 600;
+}
+.searchOptions > li {
+  font-size: 17px;
+  padding-left: 20px;
+}
+
 @keyframes loading {
   0% {
     transform: rotate(0deg);
@@ -131,6 +151,12 @@
 .list {
   list-style: none;
   max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  min-width: 700px;
 }
 .tab {
   font-weight: 700;
@@ -143,4 +169,12 @@
 .allCourses {
   padding: 2rem;
   border: 0.5px solid gray;
+}
+
+@media screen and (max-width: 700px) {
+  .coursesSection {
+    padding-left: 16px;
+    margin: 0px;
+    margin-top: 20px;
+  }
 }

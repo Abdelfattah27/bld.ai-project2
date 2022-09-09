@@ -20,7 +20,6 @@ function NavBar() {
     >
       <Menu></Menu>
       <UdemyLogo></UdemyLogo>
-      {/* <Categories></Categories> */}
       <NavBarLinks
         name="Categories"
         classes="d-md-flex d-sm-none"

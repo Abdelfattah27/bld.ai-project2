@@ -12,7 +12,7 @@ function CoursesSection() {
     <div className={Styles.coursesSection}>
       <TapsHeading></TapsHeading>
       <Taps></Taps>
-      <section className={styles.allCourses}>
+      <section id="Courses" className={styles.allCourses}>
         <CoursesTitle></CoursesTitle>
         <CoursesDescription></CoursesDescription>
         <Explore></Explore>

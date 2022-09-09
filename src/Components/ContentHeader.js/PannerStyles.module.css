@@ -1,6 +1,9 @@
 .panner {
   position: relative;
   top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .pannerContent {
   position: absolute;

@@ -4,6 +4,7 @@
   background-color: #1c1d1f;
   color: white;
   height: 500px;
+  width: 100%;
 }
 .firstSection {
   display: flex;
@@ -20,6 +21,7 @@
   padding: 0px 12px;
 }
 .companiesLogo > img {
+  cursor: pointer;
   margin-right: 15px;
 }
 .udemyBusiness {

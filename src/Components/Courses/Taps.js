@@ -9,12 +9,7 @@ const Taps = () => {
   };
   return (
     <div>
-      <ul
-        className={
-          "d-flex justify-content-between ps-0 flex-nowrap text-nowrap " +
-          styles.list
-        }
-      >
+      <ul className={styles.list}>
         <li
           onClick={setActive}
           ref={refActiveTap}
