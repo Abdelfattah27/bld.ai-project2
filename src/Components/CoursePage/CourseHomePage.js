@@ -12,6 +12,7 @@ import Reviews from "./Reviews";
 import Footer from "./Footer/Footer";
 import styles from "./CourseStyles.module.css";
 import { useParams } from "react-router-dom";
+import PreviewCourseLayout from "./PreviewCourseLayout";
 
 function CourseHomePage() {
   const { courseId } = useParams();
@@ -51,23 +52,32 @@ function CourseHomePage() {
   } else {
     renderState = (
       <>
-        <Header data={courses[courseId % 2]["Header"]}></Header>
-        <CourseTabs></CourseTabs>
-        <LearningDescription
-          data={courses[courseId % 2]["learning-objective"]}
-        ></LearningDescription>
-        <CourseContent
-          data={courses[courseId % 2]["curriculum_context"]}
-        ></CourseContent>
-        <Requirements
-          data={courses[courseId % 2]["Requirements"]}
-        ></Requirements>
-        <Description data={courses[courseId % 2]["Description"]}></Description>
-        <Instractors data={courses[courseId % 2]["Instructor"]}></Instractors>
-        <StudentFeedback
-          data={courses[courseId % 2]["studentFeedback"]}
-        ></StudentFeedback>
-        <Reviews data={courses[courseId % 2]["reviews"]}></Reviews>
+        <Header
+          data={courses[courseId % 2]["Header"]}
+          sidebar={courses[courseId % 2]["sidebar"]}
+        ></Header>
+        <PreviewCourseLayout data={courses[courseId % 2]["sidebar"]} />
+
+        <div className={styles.topContainer}>
+          <CourseTabs></CourseTabs>
+          <LearningDescription
+            data={courses[courseId % 2]["learning-objective"]}
+          ></LearningDescription>
+          <CourseContent
+            data={courses[courseId % 2]["curriculum_context"]}
+          ></CourseContent>
+          <Requirements
+            data={courses[courseId % 2]["Requirements"]}
+          ></Requirements>
+          <Description
+            data={courses[courseId % 2]["Description"]}
+          ></Description>
+          <Instractors data={courses[courseId % 2]["Instructor"]}></Instractors>
+          <StudentFeedback
+            data={courses[courseId % 2]["studentFeedback"]}
+          ></StudentFeedback>
+          <Reviews data={courses[courseId % 2]["reviews"]}></Reviews>
+        </div>
       </>
     );
   }

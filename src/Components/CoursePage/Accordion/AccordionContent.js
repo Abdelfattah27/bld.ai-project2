@@ -6,11 +6,11 @@ function AccordionContent({ data }) {
     <>
       {data.map((ele) => (
         <div key={ele.learn_url} className="row">
-          <div className="col-9">
+          <div className="col-8">
             <PlayIcon />
             <span className={styles.contentSectionTitle}>{ele.title}</span>
           </div>
-          <div className="col-3">
+          <div className="col-4  d-flex justify-content-between">
             <a
               className={"me-5 " + styles.contentSectionTitle}
               href="www.facebook.com"

@@ -17,6 +17,9 @@
   font-size: 16px;
   margin-bottom: 5px;
 }
+.lovedContainer {
+  cursor: pointer;
+}
 .BestSeller {
   background-color: #eceb98;
   font-size: smaller;

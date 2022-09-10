@@ -231,6 +231,16 @@
         "language": "English",
         "Translation": "English"
       },
+      "sidebar": {
+        "price": "E£229.99",
+        "moneyBack": "30",
+        "article": "17",
+        "downloads": "17",
+        "lifeTimeAccess": "Full lifetime access",
+        "Access": "Access on mobile and TV",
+        "certification": "Certificate of completion",
+        "Image": "https://img-c.udemycdn.com/course/750x422/394676_ce3d_5.jpg"
+      },
       "learning-objective": [
         "Extensive, informative and interesting video lecture",
         "Complete Code demonstrated in lecture",
@@ -1329,6 +1339,16 @@
         "UpdateDate": "11/2021",
         "language": "English",
         "Translation": "English, Arabic [Auto]"
+      },
+      "sidebar": {
+        "price": "E£259.99",
+        "moneyBack": "50",
+        "article": "10",
+        "downloads": "7",
+        "lifeTimeAccess": "30 day access",
+        "Access": "Access on mobile and TV",
+        "certification": "Certificate of completion",
+        "Image": "https://img-c.udemycdn.com/course/750x422/482754_7146_6.jpg"
       },
       "learning-objective": [
         "You will create a portfolio of 15 apps to be able apply for junior developer jobs at a technology company",

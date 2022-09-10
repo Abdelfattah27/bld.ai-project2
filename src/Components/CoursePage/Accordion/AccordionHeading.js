@@ -20,10 +20,10 @@ function AccordionHeading({ data, open }) {
           aria-controls={"#data" + Math.floor(data.content_length) + "2"}
         >
           <div className="w-100 row">
-            <div className="col-9">{data.title}</div>
-            <div className="col-3">
+            <div className="col-8">{data.title}</div>
+            <div className="col-4 d-flex justify-content-between">
               <a
-                className={"me-4 " + styles.sectionInformation}
+                className={" " + styles.sectionInformation}
                 href="www.facebook.com"
               >
                 {data["lecture_count"]} lectures
