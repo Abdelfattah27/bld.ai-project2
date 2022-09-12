@@ -1,9 +1,7 @@
 import React from "react";
-import Categories from "./Categories";
 import UdemyLogo from "./UdemyLogo";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SearchForm from "./SearchForm";
-import UdemyBusiness from "./UdemyBusiness";
 import NavBarLinks from "./NavBarLinks";
 import Styles from "../NavBarStyles.module.css";
 import ShoppingIcon from "./ShoppingIcon";
