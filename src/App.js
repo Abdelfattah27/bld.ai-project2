@@ -1,11 +1,22 @@
-import logo from "./logo.svg";
-import Card from "./Components/Card";
 import "./App.css";
-import Styles from "./Components/Styles.module.css";
-import Courses from "./Components/Courses";
-import CoursesSection from "./Components/CoursesSection";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./Components/HomePage";
+import CourseHomePage from "./Components/CoursePage/CourseHomePage";
 function App() {
-  return <CoursesSection></CoursesSection>;
+  return (
+    <>
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/HomePage" element={<HomePage />} />
+          <Route path="/HomePage/:courseId" element={<HomePage />} />
+          <Route path="/course/:courseId" element={<CourseHomePage />} />
+        </Routes>
+      </div>
+    </>
+  );
 }
 
 export default App;

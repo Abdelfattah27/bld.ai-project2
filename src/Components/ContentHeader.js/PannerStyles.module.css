@@ -1,0 +1,44 @@
+.panner {
+  position: relative;
+  top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.pannerContent {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  padding: 1.4rem;
+  width: 27rem;
+  top: 5rem;
+  left: 9.5rem;
+}
+.pannerContent > h1 {
+  font-size: 2rem;
+}
+.alarm {
+  width: 90%;
+}
+@media screen and (max-width: 1090px) {
+  .pannerContent {
+    top: 1rem;
+    left: 6.5rem;
+    padding: 1rem;
+    width: 20rem;
+  }
+  .alarm {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .pannerContent {
+    position: static;
+    width: 100%;
+    box-shadow: unset;
+  }
+  .alarm {
+    width: 100%;
+    position: relative;
+  }
+}

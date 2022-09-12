@@ -1,13 +1,56 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.accordion-button::after {
+  width: unset !important;
+  height: unset !important;
+  content: "";
+  background-image: unset !important;
+  background-repeat: no-repeat;
+  background-size: unset !important;
+  transition: unset !important;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: unset !important ;
+  transform: unset !important;
+}
+
+.accordion-button::before {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  content: "   ";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+  margin-right: 15px;
+}
+.accordion-button:not(.collapsed)::before {
+  background-image: var(--bs-accordion-btn-icon);
+  transform: var(--bs-accordion-btn-icon-transform);
+}
+
+.accordion-button:not(.collapsed) {
+  color: black !important;
+  background-color: #f7f9fa !important;
+}
+
+.accordion-button {
+  font-weight: 700;
 }
