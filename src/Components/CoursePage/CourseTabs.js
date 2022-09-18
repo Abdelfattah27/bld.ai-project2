@@ -7,22 +7,23 @@ function CourseTabs() {
   };
   return (
     <div className={styles.tabsContainer}>
-      <button
+      <a
+        href="#overview"
         className={styles.button + " " + styles.active}
         ref={activetab}
         onClick={activeMe}
       >
         Overview
-      </button>
-      <button className={styles.button} onClick={activeMe}>
+      </a>
+      <a href="#curriculum" className={styles.button} onClick={activeMe}>
         Curriculum
-      </button>
-      <button className={styles.button} onClick={activeMe}>
+      </a>
+      <a href="#instructor" className={styles.button} onClick={activeMe}>
         Instructor
-      </button>
-      <button className={styles.button} onClick={activeMe}>
+      </a>
+      <a href="#reviews" className={styles.button} onClick={activeMe}>
         Reviews
-      </button>
+      </a>
     </div>
   );
 }

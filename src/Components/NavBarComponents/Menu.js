@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../NavBarStyles.module.css";
+import styles from "../Icons/IconsStyles.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Menu() {
@@ -8,10 +8,7 @@ function Menu() {
       xmlns="http://www.w3.org/2000/svg"
       width="25"
       fill="currentColor"
-      className={
-        "bi bi-list d-md-none d-sm-inline-block d-inline-block" +
-        styles.menuIcon
-      }
+      className={styles.menuIcon}
       viewBox="0 0 16 16"
     >
       <path

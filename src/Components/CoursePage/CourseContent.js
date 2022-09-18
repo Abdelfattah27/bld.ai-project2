@@ -3,16 +3,16 @@ import AccordionHeading from "./Accordion/AccordionHeading";
 import styles from "./CourseStyles.module.css";
 
 function CourseContent({ data }) {
-  const [showAllCourses, setShowAllCOurses] = useState(false);
+  const [showAllCourses, setShowAllCourses] = useState(false);
   return (
-    <div className={styles.courseContentContainer}>
+    <div id="curriculum" className={styles.courseContentContainer}>
       <h3 className={styles.courseContentHeading}>Course content</h3>
       <p className={styles.courseInformation}>
         {data.data.sections.length} sections •{" "}
         {data.data["num_of_published_lectures"]} lectures •{" "}
         {data.data["estimated_content_length_text"]} total length
       </p>
-      <div className="accordion" id="accordionExample">
+      <div className="accordion" id="accordion">
         {data.data.sections.map((ele, index) =>
           !showAllCourses && index > 9 ? (
             ""
@@ -20,6 +20,7 @@ function CourseContent({ data }) {
             <AccordionHeading
               key={data.url + "" + index}
               data={ele}
+              id={index}
               open={index === 0}
             ></AccordionHeading>
           )
@@ -30,7 +31,7 @@ function CourseContent({ data }) {
       ) : (
         <button
           className={styles.moreSections}
-          onClick={() => setShowAllCOurses(true)}
+          onClick={() => setShowAllCourses(true)}
         >
           {data.data.sections.length - 9} more sections
         </button>

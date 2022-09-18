@@ -35,3 +35,11 @@
   border: 1px solid black;
   margin-left: 10px;
 }
+.menuIcon {
+  display: none;
+}
+@media screen and (max-width: 770px) {
+  .menuIcon {
+    display: inline-block;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../NavBarStyles.module.css";
+import styles from "./NavBarStyles.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function NavButton({ disc, custom }) {

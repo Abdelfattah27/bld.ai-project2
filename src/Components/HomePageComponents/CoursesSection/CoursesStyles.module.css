@@ -1,0 +1,155 @@
+.cardLink {
+  color: black;
+  text-decoration: none;
+}
+.cardLink > * {
+  margin-top: 5px;
+}
+.card :hover {
+  color: unset;
+}
+.title {
+  min-height: 42px;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.lovedContainer {
+  cursor: pointer;
+}
+.BestSeller {
+  background-color: #eceb98;
+  font-size: smaller;
+  color: black;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  text-indent: 3px;
+  margin: 10px 2px;
+  margin-left: 0px;
+  padding: 1px;
+  padding-bottom: 5px;
+}
+.instructor {
+  color: #6a6f73;
+}
+.rate {
+  color: #b4690e;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.students {
+  color: #6a6f73;
+}
+.price {
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+.alter {
+  color: #6a6f73;
+  text-decoration: line-through;
+}
+.image {
+  width: 100%;
+}
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coursesSection {
+  /* border: 0.3px solid gray; */
+  margin: 30px;
+  padding: 50px;
+  padding-left: 40px;
+  padding-right: 20px;
+  font-size: larger;
+  margin-bottom: 200px;
+}
+.coursesSection p {
+  max-width: 900px;
+}
+.explore {
+  color: black;
+  background-color: white;
+  border: solid 1px black;
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 150px;
+  margin: 30px 0px;
+}
+.explore:hover {
+  background-color: #f3f3f3;
+}
+.error {
+  text-align: center;
+  color: #b00020;
+  text-decoration: underline;
+  margin-top: 100px;
+}
+
+.noCourses {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.noCourses > * {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.sorry {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.optionHeading {
+  font-weight: 600;
+}
+.searchOptions > li {
+  font-size: 17px;
+  padding-left: 20px;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.list {
+  list-style: none;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  min-width: 900px;
+}
+.tab {
+  font-weight: 700;
+  color: #6a6f73;
+  cursor: pointer;
+}
+.active {
+  color: black;
+}
+.allCourses {
+  padding: 2rem;
+  border: 0.5px solid gray;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 700px) {
+  .coursesSection {
+    padding-left: 16px;
+    margin: 0px;
+    margin-top: 20px;
+  }
+}

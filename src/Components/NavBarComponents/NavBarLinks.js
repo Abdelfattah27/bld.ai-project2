@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "../NavBarStyles.module.css";
+import styles from "./NavBarStyles.module.css";
 function NavBarLinks({ name, classes }) {
   return (
     <div

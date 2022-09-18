@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import styles from "../NavBarStyles.module.css";
+import React from "react";
+import { useSearchParams } from "react-router-dom";
+import styles from "./NavBarStyles.module.css";
 import SearchIcon from "./SearchIcon";
 function SearchForm() {
-  const [searchKeyWord, setSearch] = useState("");
+  const [searchKeyWord, setSearch] = useSearchParams();
   const handleSubmit = (e) => {
-    setSearch(e.target[1].value);
+    e.preventDefault();
+    setSearch({ search: e.target[1].value });
   };
   return (
     <form
       onSubmit={handleSubmit}
-      action={"/HomePage/" + searchKeyWord}
       className="d-none ms-3 me-3 d-md-flex justify-content-center align-items-center flex-grow-1 d-sm-none "
     >
       <div className={styles.formBorder}>
